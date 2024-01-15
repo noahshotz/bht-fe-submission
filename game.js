@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Initialize game field (randomly assign money or mines to a cell)
             const randomNum = Math.random();
-            if (randomNum <= 0.2) {
+            if (randomNum < 0.5) {
                 gridItem.classList.add('mine');
                 mineCount++;
             } else {
