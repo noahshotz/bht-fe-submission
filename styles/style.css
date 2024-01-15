@@ -100,6 +100,7 @@ h2 {
 }
 
 .game-section {
+  padding: 2rem;
   display: flex;
   align-items: stretch;
   justify-content: center;

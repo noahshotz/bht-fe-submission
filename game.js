@@ -52,26 +52,36 @@ document.addEventListener('DOMContentLoaded', function () {
         let mineCount = 0;
         let moneyCount = 0;
 
+        // Place the first mine randomly
+        const firstMineIndex = Math.floor(Math.random() * gridItems.length);
+        gridItems[firstMineIndex].classList.add('mine');
+        mineCount++;
+
+        // Iterate over each grid item
         gridItems.forEach((gridItem, index) => {
             // Track whether the item has been clicked
             gridItem.dataset.clicked = false;
 
-            // Initialize game field (randomly assign money or mines to a cell)
-            const randomNum = Math.random();
-            if (randomNum < 0.5) {
-                gridItem.classList.add('mine');
-                mineCount++;
-            } else {
-                gridItem.classList.add('money');
-                moneyCount++;
+            // Skip the first mine placement
+            if (index !== firstMineIndex) {
+                // Initialize game field (adjust odds for placing mines and money)
+                const randomNum = Math.random();
+                if (randomNum < 0.1) { // Reduced chance for additional mines
+                    gridItem.classList.add('mine');
+                    mineCount++;
+                } else {
+                    gridItem.classList.add('money');
+                    moneyCount++;
+                }
             }
 
+            // Event listener for clicks
             gridItem.addEventListener('click', function handleClick() {
-                // Validate that cell has not been flipped yet
+                // Validate that cell has not been clicked yet
                 if (gridItem.dataset.clicked === "true") return;
                 gridItem.dataset.clicked = true;
 
-                // assert item
+                // Assert item and process click
                 if (gridItem.classList.contains('mine')) {
                     processMineClick(gridItem);
                 } else if (gridItem.classList.contains('money')) {
@@ -79,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
 
         /**
          * Player hit mine
