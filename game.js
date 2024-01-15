@@ -1,16 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // get `start game` button
     var startGameButton = document.getElementById('startgame');
+    // get `bet amount`
     var betInput = document.getElementById('bet');
+    // get `player balance``
+    var balance = document.getElementById('balance');
 
     startGameButton.addEventListener('click', function () {
-        startgame(betInput.value);
+        startgame(Number(betInput.value), Number(balance.textContent));
     });
 
-    function startgame(bet) {
+    function startgame(bet, balance) {
         if (bet < 1) {
             console.log("Your bet of " + (bet || 0) + " is too low. Minimum bet is 1 coin!");
             return;
         }
+
+        if (bet > balance) {
+            console.log("Insufficient balance!");
+            return;
+        }
+
+        balance -= bet;
+        document.getElementById('balance').textContent = balance;
 
         // Step 1: Reset each grid item
         const originalGridItems = document.querySelectorAll('.grid-item');
@@ -61,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("Found money: " + foundMoney + "/" + moneyCount);
             if (foundMoney === moneyCount) {
                 console.log("Player won " + (bet * 2) + " coins!");
+                balance += (bet * 2);
+                document.getElementById('balance').textContent = balance;
                 endGame();
             }
         }
