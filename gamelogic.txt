@@ -1,0 +1,14 @@
+1. initialize necessary variables
+    - foundMoney (keep track of money found so far)
+    - moneyCount (amount of money placed on fields)
+    - mineCount (amount of mines placed on fields)
+
+2. loop trough all elements with class .grid-item and randomly add class .mine or .money to each    element and increment the moneyCount and mineCount respectively
+
+3. add event listener to each element
+
+4. if element has class .mine, add class .mine-clicked and remove event listener from all elements to end game
+
+5. if element has class .money, add class .money-clicked, increment foundMoney variable, and remove event listener from element
+
+6. if foundMoney equals moneyCount, add class .win to all elements to end game

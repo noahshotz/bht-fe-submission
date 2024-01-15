@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Startseite</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- import game logic js -->
+    <script language="javascript" type="text/javascript" src="game.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="index.html" id="header-logo">Money Heist</a>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <!-- game wrapper -->
+        <section class="game-section">
+            <div class="game-sidebar">
+                <div class="game-sidebar-section">
+                    <label for="bet">Einsatz</label>
+                    <input id="bet" name="bet" type="number" min="1" max="100" />
+                    <button id="startgame" class="btn btn-default">Start game</button>
+                </div>
+                <div class="game-sidebar-section help-section">
+                    <a href="#">Help</a>
+                    <a href="#">Fairness</a>
+                </div>
+            </div>
+            <div class="game-grid-container">
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+                <div class="grid-item">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="win-screen">
+                <h2>WIN</h2>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
