@@ -42,6 +42,10 @@ ul li {
   list-style: none;
 }
 
+button {
+  font-family: "Poppins", sans-serif;
+}
+
 header {
   padding: 1rem 5rem;
   width: 100vw;
