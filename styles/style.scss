@@ -113,6 +113,11 @@ h1 {
     font-size: 5rem;
     font-weight: 700;
     font-family: 'Dela Gothic One', sans-serif;
+    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 h2 {
