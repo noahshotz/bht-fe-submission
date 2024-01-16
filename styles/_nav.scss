@@ -13,6 +13,7 @@ header {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
+    font-family: 'Dela Gothic One', sans-serif;
 }
 
 header ul {
@@ -20,7 +21,7 @@ header ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 header ul li {

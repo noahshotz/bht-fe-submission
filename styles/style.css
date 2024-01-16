@@ -34,6 +34,10 @@ body {
   scroll-snap-type: both mandatory;
 }
 
+h1, h2, h3 {
+  margin: 1rem 0;
+}
+
 a {
   color: white;
 }
@@ -62,6 +66,7 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 header ul {
@@ -69,7 +74,7 @@ header ul {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 header ul li {
@@ -93,6 +98,7 @@ a {
 h1 {
   font-size: 5rem;
   font-weight: 700;
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 h2 {
@@ -204,13 +210,13 @@ h2 {
 }
 
 .btn {
+  font-size: 1rem;
   display: inline-block;
   background-color: #1475e1;
   color: white;
-  padding: 0.75rem 2.25rem;
-  border-radius: 2rem;
-  margin: 1rem 0rem;
-  font-size: 1.3rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+  margin: 0;
   border: none;
   cursor: pointer;
 }
@@ -223,6 +229,17 @@ h2 {
   color: black;
   font-weight: 600;
   background-color: lime;
+}
+
+.btn-landing {
+  font-size: 1.3rem;
+  margin: 1rem 0rem;
+  padding: 0.75rem 2.25rem;
+  border-radius: 2rem;
+}
+
+.btn-dark {
+  background-color: #1e3544;
 }
 
 .text-section {
@@ -242,11 +259,25 @@ h2 {
   height: 100%;
 }
 
+.landing-section h1,
+.landing-section h2 {
+  margin: 0;
+}
+
+.landing-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
 .landing-image-container {
   background-color: blue;
   background-image: url("../assets/landing-bg-flipped.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .landing-content {
