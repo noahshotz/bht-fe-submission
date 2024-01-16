@@ -1,0 +1,107 @@
+/**
+ * Game page
+ */
+
+ .game-section {
+    padding: 2rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.game-sidebar {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #1a2c38;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.game-sidebar-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.help-section {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.game-sidebar-section label,
+.game-sidebar-section input {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.game-sidebar-section input {
+    padding: 0.5rem 0.5rem;
+    background: transparent;
+    border: solid 2px #314c5d;
+    color: white;
+    border-radius: 3px;
+}
+
+.game-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+}
+
+.grid-item {
+    position: relative;
+    top: 0;
+    width: calc(200px - 1rem);
+    height: calc(200px - 1rem);
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+    transition: 0.2s;
+    border-radius: 0.5rem;
+}
+
+.grid-item-active {
+    background-color: #1475e1;
+    cursor: pointer;
+}
+
+.grid-item-active:hover {
+    top: -2px;
+    background-color: #3c3cff;
+}
+
+.mine-clicked,
+.mine-clicked:hover {
+    background-color: red;
+}
+
+.money-clicked,
+.money-clicked:hover {
+    background-color: green;
+}
+
+.win {
+    background-color: yellow;
+}
+
+.win:hover {
+    background-color: yellow;
+}
+
+.game-over,
+.game-over:hover {
+    background-color: red;
+}
+
+.win-screen {
+    display: none;
+}

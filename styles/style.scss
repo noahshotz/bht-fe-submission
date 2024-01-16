@@ -1,5 +1,10 @@
 @use 'reset';
 @use 'nav';
+@use 'game';
+
+/** 
+ * General page setup
+ */
 
 section {
     width: 100vw;
@@ -10,125 +15,57 @@ section {
     align-items: flex-start;
 }
 
-a {
-    text-decoration: none;
-    font-weight: 600;
+// landing section
+.landing-section {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 68px);
+    flex-direction: column wrap;
 }
 
-h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    font-family: 'Dela Gothic One', sans-serif;
+.landing-section>* {
+    padding: 5rem;
+    width: 50vw;
+    height: 100%;
 }
 
-h2 {
-    font-size: 3rem;
+.landing-section h1,
+.landing-section h2 {
+    margin: 0;
 }
 
-.game-section {
-    padding: 2rem;
+.landing-text {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: row;
-    gap: 2rem;
-}
-
-.game-sidebar {
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    background-color: #1a2c38;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-}
-
-.game-sidebar-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-}
-
-.help-section {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.game-sidebar-section label,
-.game-sidebar-section input {
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.game-sidebar-section input {
-    padding: 0.5rem 0.5rem;
-    background: transparent;
-    border: solid 2px #314c5d;
-    color: white;
-    border-radius: 3px;
-}
-
-
-.game-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 1rem;
-}
-
-.grid-item {
-    position: relative;
-    top: 0;
-    width: calc(200px - 1rem);
-    height: calc(200px - 1rem);
-    background-color: grey;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: not-allowed;
-    transition: 0.2s;
-    border-radius: 0.5rem;
+    flex-direction: column;
+    text-align: left;
 }
 
-.grid-item-active {
-    background-color: #1475e1;
-    cursor: pointer;
+.landing-image-container {
+    background-color: blue;
+    background-image: url("../assets/landing-bg-flipped.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.grid-item-active:hover {
-    top: -2px;
-    background-color: #3c3cff;
+.landing-content {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.mine-clicked,
-.mine-clicked:hover {
-    background-color: red;
+// general fullscreen text sections
+.text-section {
+    max-width: 50rem;
 }
 
-.money-clicked,
-.money-clicked:hover {
-    background-color: green;
-}
-
-.win {
-    background-color: yellow;
-}
-
-.win:hover {
-    background-color: yellow;
-}
-
-.game-over,
-.game-over:hover {
-    background-color: red;
-}
-
-.win-screen {
-    display: none;
-}
+/**
+ * Button styles
+ */
 
 .btn {
     font-size: 1rem;
@@ -163,48 +100,21 @@ h2 {
     background-color: #1e3544;
 }
 
-.text-section {
-    max-width: 50rem;
+/**
+ * General text styling
+ */
+
+a {
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.landing-section {
-    margin: 0;
-    padding: 0;
-    height: calc(100vh - 68px);
-    flex-direction: column wrap;
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: 'Dela Gothic One', sans-serif;
 }
 
-.landing-section > * {
-    padding: 5rem;
-    width: 50vw;
-    height: 100%;
-}
-
-.landing-section h1,
-.landing-section h2 {
-    margin: 0;
-}
-
-.landing-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.landing-image-container {
-    background-color: blue;
-    background-image: url("../assets/landing-bg-flipped.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.landing-content {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h2 {
+    font-size: 3rem;
 }

@@ -37,11 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // update player balance
         balance -= bet;
         document.getElementById('balance').textContent = balance;
-        document.getElementById('balance').style.color = "red";
-        setTimeout(() => {
-            document.getElementById('balance').removeAttribute('style');
-        }, "500");
-
 
         // reset each grid item in case of previous game
         const originalGridItems = document.querySelectorAll('.grid-item');
@@ -117,10 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (foundMoney === moneyCount) {
                 console.log("Player won " + (bet * 2) + " coins!");
                 balance += (bet * 2);
-                document.getElementById('balance').style.color = "green";
-                setTimeout(() => {
-                    document.getElementById('balance').removeAttribute('style');
-                }, "500");
                 document.getElementById('balance').textContent = balance;
                 endGame();
             }

@@ -81,30 +81,9 @@ header ul li {
   display: inline;
 }
 
-section {
-  width: 100vw;
-  padding: 10rem 2rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-a {
-  text-decoration: none;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  font-family: "Dela Gothic One", sans-serif;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
+/**
+ * Game page
+ */
 .game-section {
   padding: 2rem;
   display: flex;
@@ -209,41 +188,16 @@ h2 {
   display: none;
 }
 
-.btn {
-  font-size: 1rem;
-  display: inline-block;
-  background-color: #1475e1;
-  color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 10px;
-  margin: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-default {
-  font-size: 1rem;
-  margin: 0.5rem 0rem;
-  padding: 0.75rem 0.5rem;
-  border-radius: 3px;
-  color: black;
-  font-weight: 600;
-  background-color: lime;
-}
-
-.btn-landing {
-  font-size: 1.3rem;
-  margin: 1rem 0rem;
-  padding: 0.75rem 2.25rem;
-  border-radius: 2rem;
-}
-
-.btn-dark {
-  background-color: #1e3544;
-}
-
-.text-section {
-  max-width: 50rem;
+/** 
+ * General page setup
+ */
+section {
+  width: 100vw;
+  padding: 10rem 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .landing-section {
@@ -286,4 +240,62 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.text-section {
+  max-width: 50rem;
+}
+
+/**
+ * Button styles
+ */
+.btn {
+  font-size: 1rem;
+  display: inline-block;
+  background-color: #1475e1;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-default {
+  font-size: 1rem;
+  margin: 0.5rem 0rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 3px;
+  color: black;
+  font-weight: 600;
+  background-color: lime;
+}
+
+.btn-landing {
+  font-size: 1.3rem;
+  margin: 1rem 0rem;
+  padding: 0.75rem 2.25rem;
+  border-radius: 2rem;
+}
+
+.btn-dark {
+  background-color: #1e3544;
+}
+
+/**
+ * General text styling
+ */
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "Dela Gothic One", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
 }/*# sourceMappingURL=style.css.map */
