@@ -230,7 +230,23 @@ h2 {
 }
 
 .landing-section {
+  margin: 0;
+  padding: 0;
   height: calc(100vh - 68px);
+  flex-direction: column wrap;
+}
+
+.landing-section > * {
+  padding: 5rem;
+  width: 50vw;
+  height: 100%;
+}
+
+.landing-image-container {
+  background-color: blue;
+  background-image: url("../assets/landing-bg-flipped.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .landing-content {
