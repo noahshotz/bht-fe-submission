@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+(function game() {
+
+    "use strict";
 
     /**
-     * Get required data input
-     */
+ * Get required data input
+ */
 
     // get `start game` button
     var startGameButton = document.getElementById('startgame');
@@ -146,5 +149,4 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("Added mines: " + mineCount);
         console.log("Added money: " + moneyCount);
     }
-});
-
+})();;

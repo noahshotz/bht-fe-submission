@@ -70,8 +70,8 @@ section {
 .btn {
     font-size: 1rem;
     display: inline-block;
-    background-color: #1475e1;
-    color: white;
+    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
+    color: #000;
     padding: 0.5rem 1.25rem;
     border-radius: 10px;
     margin: 0;
@@ -99,7 +99,8 @@ section {
 }
 
 .btn-dark {
-    background-color: #1e3544;
+    background: #1e3544;
+    color: #fff;
 }
 
 /**
