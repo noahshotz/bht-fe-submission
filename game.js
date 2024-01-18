@@ -1,21 +1,19 @@
-
 (function game() {
-
     "use strict";
 
     /**
- * Get required data input
- */
+     * Get required data input
+     */
 
     // get `start game` button
-    var startGameButton = document.getElementById('startgame');
+    let startGameButton = document.getElementById('startgame');
     // get `bet amount`
-    var betInput = document.getElementById('bet');
+    let betInput = document.getElementById('bet');
     // get `player balance``
-    var balance = document.getElementById('balance');
+    let balance = document.getElementById('balance');
 
     /**
-     * Start game process
+     * Start game process event listener
      */
     startGameButton.addEventListener('click', function () {
         startgame(Number(betInput.value), Number(balance.textContent));
@@ -78,6 +76,14 @@
                 }
             }
 
+            // set stats to initial state
+            document.getElementById('moneyfoundindicator').textContent = foundMoney + "/" + moneyCount;
+            document.getElementById('minecountindicator').textContent = mineCount;
+
+            // calculate initial mine risk
+            let mineRisk = (mineCount / gridItems.length) * 100;
+            document.getElementById('mineriskindicator').textContent = mineRisk.toFixed(2) + "%";
+
             // Event listener for clicks
             gridItem.addEventListener('click', function handleClick() {
                 // Validate that cell has not been clicked yet
@@ -90,6 +96,10 @@
                 } else if (gridItem.classList.contains('money')) {
                     processMoneyClick(gridItem);
                 }
+
+                // continously calculate mine risk by dividing the number of mines by the number of remaining cells
+                mineRisk = (mineCount / (gridItems.length - foundMoney)) * 100;
+                document.getElementById('mineriskindicator').textContent = mineRisk.toFixed(2) + "%";
             });
         });
 
@@ -111,6 +121,10 @@
             gridItem.classList.add('money-clicked');
             gridItem.querySelector("h2").innerHTML = "💰";
             foundMoney++;
+            document.getElementById('moneyfoundindicator').textContent = foundMoney + "/" + moneyCount;
+            //document.getElementById('mineriskindicator').textContent = 'New Value';
+            //document.getElementById('minecountindicator').textContent = 'New Value';
+
             console.log("Found money: " + foundMoney + "/" + moneyCount);
             if (foundMoney === moneyCount) {
                 console.log("Player won " + (bet * 2) + " coins!");
@@ -149,4 +163,4 @@
         console.log("Added mines: " + mineCount);
         console.log("Added money: " + moneyCount);
     }
-})();;
+})();

@@ -30,9 +30,17 @@
         <section class="game-section">
             <div class="game-sidebar">
                 <div class="game-sidebar-section">
-                    <label for="bet">Einsatz</label>
+                    <div class="bet-label-group">
+                        <label for="bet">Einsatz</label>
+                        <span>Min: 1 - Max: 100</span>
+                    </div>
                     <input id="bet" name="bet" type="number" min="1" max="100" />
                     <button id="startgame" class="btn btn-default">Place bet</button>
+                    <div class="stats">
+                        <span>Mine count:</span><span id="minecountindicator">-</span>
+                        <span>Money found:</span><span id="moneyfoundindicator">-</span>
+                        <span>Mine risk:</span><span id="mineriskindicator">-</span>
+                    </div>
                 </div>
                 <div class="game-sidebar-section help-section">
                     <a href="#">Help</a>
