@@ -137,6 +137,10 @@ header ul li {
   justify-content: space-between;
 }
 
+.game-sidebar-section .btn {
+  margin: 0;
+}
+
 .game-sidebar-section label,
 .game-sidebar-section input {
   width: 100%;
@@ -227,6 +231,10 @@ header ul li {
 
 .win-screen {
   display: none;
+}
+
+.hide {
+  display: none !important;
 }
 
 /** 

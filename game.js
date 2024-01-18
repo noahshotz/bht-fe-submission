@@ -7,6 +7,8 @@
 
     // get `start game` button
     let startGameButton = document.getElementById('startgame');
+    // get `cash out` button
+    let cashOutButton = document.getElementById('cashout');
     // get `bet amount`
     let betInput = document.getElementById('bet');
     // get `player balance``
@@ -23,6 +25,17 @@
      * Game logic
      */
     function startgame(bet, balance) {
+
+        startGameButton.classList.add('hide');
+        cashOutButton.classList.remove('hide');
+
+        /**
+         * Cash out process event listener
+         */
+        cashOutButton.addEventListener('click', function () {
+            cashOut();
+        });
+
         // validate bet size
         if (bet < 1) {
             console.log("Your bet of " + (bet || 0) + " is too low. Minimum bet is 1 coin!");
@@ -103,6 +116,27 @@
             });
         });
 
+        /**
+         * Handle cash out event
+         */
+        function cashOut() {
+            console.log("Player cashed out");
+            endGame();
+        }
+
+        /**
+         * Arriving at a final state uncovers all cells and sets each of them to visited
+         */
+        function endGame() {
+            gridItems.forEach(gridItem => {
+                gridItem.classList.add(foundMoney === moneyCount ? 'win' : 'game-over');
+                gridItem.querySelector("h2").innerHTML = gridItem.classList.contains('mine') ? "💣" : "💰";
+                gridItem.dataset.clicked = true;
+            });
+            startGameButton.classList.remove('hide');
+            cashOutButton.classList.add('hide');
+        }
+
 
         /**
          * Player hit mine
@@ -132,17 +166,6 @@
                 document.getElementById('balance').textContent = balance;
                 endGame();
             }
-        }
-
-        /**
-         * Arriving at a final state uncovers all cells and sets each of them to visited
-         */
-        function endGame() {
-            gridItems.forEach(gridItem => {
-                gridItem.classList.add(foundMoney === moneyCount ? 'win' : 'game-over');
-                gridItem.querySelector("h2").innerHTML = gridItem.classList.contains('mine') ? "💣" : "💰";
-                gridItem.dataset.clicked = true;
-            });
         }
 
         /**
