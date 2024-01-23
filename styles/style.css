@@ -259,6 +259,46 @@ header ul li {
     width: 100%;
   }
 }
+@media (min-width: 576px) {
+  .game-section {
+    padding: 2rem 2rem;
+  }
+  .game-grid-container {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .game-section {
+    padding: 2rem 0rem;
+  }
+  .game-grid-container {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .game-section {
+    padding: 2rem 5rem;
+  }
+  .game-grid-container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .game-section {
+    padding: 2rem 7rem;
+  }
+  .game-grid-container {
+    width: 55%;
+  }
+}
+@media (min-width: 1400px) {
+  .game-section {
+    padding: 2rem 15rem;
+  }
+  .game-grid-container {
+    width: 60%;
+  }
+}
 /** 
  * General page setup
  */
