@@ -113,7 +113,7 @@ a {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: clamp(1rem, 5vw, 6rem);
     font-weight: 700;
     font-family: 'Dela Gothic One', sans-serif;
     background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);

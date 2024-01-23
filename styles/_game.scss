@@ -20,6 +20,7 @@
     background-color: #1a2c38;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    order: 2
 }
 
 .game-sidebar-section {
@@ -98,6 +99,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 1rem;
+    order: 1;
 }
 
 .grid-item {
@@ -145,10 +147,6 @@
 .game-over,
 .game-over:hover {
     background-color: red;
-}
-
-.win-screen {
-    display: none;
 }
 
 .hide {

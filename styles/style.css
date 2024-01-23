@@ -102,6 +102,7 @@ header ul li {
   background-color: #1a2c38;
   padding: 1.5rem;
   border-radius: 0.5rem;
+  order: 2;
 }
 
 .game-sidebar-section {
@@ -180,6 +181,7 @@ header ul li {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-gap: 1rem;
+  order: 1;
 }
 
 .grid-item {
@@ -227,10 +229,6 @@ header ul li {
 .game-over,
 .game-over:hover {
   background-color: red;
-}
-
-.win-screen {
-  display: none;
 }
 
 .hide {
@@ -343,7 +341,7 @@ a {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: clamp(1rem, 5vw, 6rem);
   font-weight: 700;
   font-family: "Dela Gothic One", sans-serif;
   background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
