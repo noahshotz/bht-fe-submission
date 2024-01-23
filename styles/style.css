@@ -247,11 +247,13 @@ header ul li {
 
 @media (max-width: 576px) {
   .game-section {
+    gap: 1rem;
+  }
+  .game-section {
     padding: 1rem;
   }
   .game-grid-container {
     width: 100%;
-    height: 100%;
   }
   .game-sidebar {
     width: 100%;
