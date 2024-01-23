@@ -134,6 +134,7 @@ header ul li {
 }
 
 .help-section {
+  padding-top: 1rem;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -178,8 +179,10 @@ header ul li {
 }
 
 .game-grid-container {
+  width: 40%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-gap: 1rem;
   order: 1;
 }
@@ -187,8 +190,8 @@ header ul li {
 .grid-item {
   position: relative;
   top: 0;
-  width: calc(200px - 1rem);
-  height: calc(200px - 1rem);
+  width: 100%;
+  height: 100%;
   background-color: grey;
   display: flex;
   align-items: center;
@@ -196,6 +199,13 @@ header ul li {
   cursor: not-allowed;
   transition: 0.2s;
   border-radius: 0.5rem;
+}
+
+.grid-item::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* This will make the height equal to 100% of the width */
+  /* Since it's a square, it will keep the aspect ratio of 1:1 */
 }
 
 .grid-item-active {
@@ -235,6 +245,18 @@ header ul li {
   display: none !important;
 }
 
+@media (max-width: 576px) {
+  .game-section {
+    padding: 1rem;
+  }
+  .game-grid-container {
+    width: 100%;
+    height: 100%;
+  }
+  .game-sidebar {
+    width: 100%;
+  }
+}
 /** 
  * General page setup
  */
