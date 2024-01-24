@@ -65,6 +65,10 @@
         let foundMoney = 0;
         let mineCount = 0;
         let moneyCount = 0;
+        let currentProfit = bet;
+
+        // render current possible profit as player bet amount
+        document.getElementById('current-profit').textContent = " (" + currentProfit + " €)";
 
         // Place the first mine randomly
         const firstMineIndex = Math.floor(Math.random() * gridItems.length);
@@ -121,6 +125,8 @@
          */
         function cashOut() {
             console.log("Player cashed out");
+            balance += currentProfit;
+            document.getElementById('balance').textContent = balance;
             endGame();
         }
 
@@ -156,13 +162,14 @@
             gridItem.querySelector("h2").innerHTML = "💰";
             foundMoney++;
             document.getElementById('moneyfoundindicator').textContent = foundMoney + "/" + moneyCount;
-            //document.getElementById('mineriskindicator').textContent = 'New Value';
-            //document.getElementById('minecountindicator').textContent = 'New Value';
+
+            currentProfit = Math.floor(currentProfit * 1.2);
+            console.log("Player has won " + currentProfit + " so far.");
+            document.getElementById('current-profit').textContent = " (" + currentProfit + " €)";
 
             console.log("Found money: " + foundMoney + "/" + moneyCount);
             if (foundMoney === moneyCount) {
-                console.log("Player won " + (bet * 2) + " coins!");
-                balance += (bet * 2);
+                balance += currentProfit;
                 document.getElementById('balance').textContent = balance;
                 endGame();
             }

@@ -20,7 +20,7 @@
     background-color: #1a2c38;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    order: 2
+    order: 1
 }
 
 .game-sidebar-section {
@@ -179,6 +179,7 @@
 
     .game-sidebar {
         width: 100%;
+        order: 2;
     }
 }
 
