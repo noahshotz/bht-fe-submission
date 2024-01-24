@@ -1,6 +1,7 @@
 @use 'reset';
 @use 'nav';
 @use 'game';
+@use 'breakpoints';
 
 /** 
  * General page setup
@@ -24,7 +25,7 @@ section:nth-child(even) {
     margin: 0;
     padding: 0;
     height: calc(100vh - 68px);
-    flex-direction: column wrap;
+    flex-flow: column wrap;
 }
 
 .landing-section>* {
@@ -130,4 +131,79 @@ h1 {
 
 h2 {
     font-size: 3rem;
+}
+
+@media (max-width: breakpoints.$breakpoint-sm) {
+    .landing-section {
+        flex-flow: column;
+    }
+
+    .landing-section>* {
+        padding: 1rem;
+        width: 100vw;
+        height: 50%;
+    }
+
+}
+
+
+
+@media (min-width: breakpoints.$breakpoint-sm) {
+    .landing-section {
+        flex-flow: column;
+    }
+
+    .landing-section>* {
+        padding: 5rem;
+        width: 100vw;
+        height: 50%;
+    }
+
+}
+
+/*
+@media (min-width: breakpoints.$breakpoint-md) {
+    .game-section {
+        padding: 2rem 0rem
+    }
+
+    .game-grid-container {
+        width: 60%;
+    }
+}
+
+
+
+@media (min-width: breakpoints.$breakpoint-lg) {
+    .game-section {
+        padding: 2rem 5rem
+    }
+
+    .game-grid-container {
+        width: 60%;
+    }
+}
+
+@media (min-width: breakpoints.$breakpoint-xl) {
+    .game-section {
+        padding: 2rem 7rem
+    }
+
+    .game-grid-container {
+        width: 55%;
+    }
+}
+*/
+
+@media (min-width: breakpoints.$breakpoint-lg) {
+    .landing-section {
+        flex-flow: row;
+    }
+
+    .landing-section>* {
+        padding: 5rem;
+        width: 50vw;
+        height: 100%;
+    }
+
 }
