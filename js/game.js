@@ -141,7 +141,6 @@
          * Handle cash out event
          */
         function cashOut() {
-            console.log("Player cashed out");
             balance += currentProfit;
             document.getElementById('balance').textContent = balance;
             endGame();
@@ -167,7 +166,6 @@
         function processMineClick(gridItem) {
             gridItem.classList.add('mine-clicked');
             gridItem.querySelector("h2").innerHTML = "💣";
-            console.log("Game over, player lost " + bet + " coins!");
             endGame();
         }
 
@@ -181,10 +179,8 @@
             document.getElementById('moneyfoundindicator').textContent = foundMoney + "/" + moneyCount;
 
             currentProfit = Math.floor(currentProfit * 1.2);
-            console.log("Player has won " + currentProfit + " so far.");
             document.getElementById('current-profit').textContent = " (" + currentProfit + " €)";
 
-            console.log("Found money: " + foundMoney + "/" + moneyCount);
             if (foundMoney === moneyCount) {
                 balance += currentProfit;
                 document.getElementById('balance').textContent = balance;
@@ -207,7 +203,5 @@
             newGridItem.querySelector("h2").innerHTML = "";
         }
 
-        console.log("Added mines: " + mineCount);
-        console.log("Added money: " + moneyCount);
     }
 })();
