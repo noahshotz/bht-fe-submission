@@ -1,19 +1,21 @@
+$black: #000;
+$white: #fff;
+
+// general page color palette
 $dblue-100: #0f212e;
 $dblue-90: #1a2c38;
 $dblue-80: #152f41;
 $dblue-70: #1e3544;
 $dblue-60: #314c5d;
 $dblue-50: #427ca1;
-
 $lightblue: #b8b9ff;
-$alert: #ff0000;
 
-$black: #000;
-$white: #fff;
-
+// game related colors
 $cell: #1475e1;
 $cell-hover: #3c3cff;
-
+$success: #008000;
 $win: #ffff00;
+$alert: #ff0000;
 
+// gradients
 $orange-gradient: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);

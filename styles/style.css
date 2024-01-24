@@ -266,6 +266,9 @@ header ul li {
   border-radius: 0.5rem;
 }
 
+/*
+ * Game cells
+ */
 .grid-item::before {
   content: "";
   display: block;
@@ -289,7 +292,7 @@ header ul li {
 
 .money-clicked,
 .money-clicked:hover {
-  background-color: green;
+  background-color: #008000;
 }
 
 .win {
@@ -380,6 +383,9 @@ section:nth-child(even) {
   background-color: #152f41;
 }
 
+/** 
+ * Landing section
+ */
 .landing-section {
   margin: 0;
   padding: 0;

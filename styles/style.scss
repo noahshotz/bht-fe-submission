@@ -19,8 +19,10 @@ section:nth-child(even) {
     background-color: colors.$dblue-80;
 }
 
-// landing section
-.landing-section {
+/** 
+ * Landing section
+ */
+ .landing-section {
     margin: 0;
     padding: 0;
     height: calc(100vh - 68px);
