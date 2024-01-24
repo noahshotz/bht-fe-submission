@@ -4,3 +4,11 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin bg-image($fallback-color, $image, $size, $position, $repeat) {
+    background-color: $fallback-color;
+    background-image: url($image);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}

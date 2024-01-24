@@ -130,18 +130,18 @@ header ul li {
 .game-section {
   padding: 2rem;
   display: flex;
-  align-items: stretch;
+  flex-flow: row wrap;
   justify-content: center;
-  flex-direction: row;
+  align-items: stretch;
   gap: 2rem;
 }
 
 .game-sidebar {
   width: 18rem;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-flow: column nowrap;
   justify-content: space-between;
+  align-items: flex-start;
   background-color: #1a2c38;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -158,9 +158,9 @@ header ul li {
 .bet-label-group {
   width: 100%;
   display: flex;
-  flex-direction: row wrap;
-  align-items: flex-end;
+  flex-flow: row wrap;
   justify-content: space-around;
+  align-items: flex-end;
 }
 
 .bet-label-group label {
@@ -197,7 +197,7 @@ header ul li {
   padding: 0.5rem 0.5rem;
   background: transparent;
   border: solid 2px #314c5d;
-  color: white;
+  color: #fff;
   border-radius: 3px;
 }
 
@@ -237,8 +237,9 @@ header ul li {
   height: 100%;
   background-color: grey;
   display: flex;
-  align-items: center;
+  flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   cursor: not-allowed;
   transition: 0.2s;
   border-radius: 0.5rem;
@@ -378,10 +379,9 @@ section:nth-child(even) {
 
 .landing-text {
   display: flex;
-  align-items: flex-start;
+  flex-flow: column nowrap;
   justify-content: center;
-  flex-direction: column;
-  text-align: left;
+  align-items: flex-start;
 }
 
 .landing-image-container {
@@ -390,14 +390,6 @@ section:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.landing-content {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .text-section {
@@ -425,9 +417,9 @@ section:nth-child(even) {
   margin: 0.5rem 0rem;
   padding: 0.75rem 0.5rem;
   border-radius: 3px;
-  color: black;
+  color: #000;
   font-weight: 600;
-  background-color: lime;
+  background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
 }
 
 .btn-landing {

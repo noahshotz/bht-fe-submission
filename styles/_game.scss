@@ -3,23 +3,17 @@
  */
 
 @use 'breakpoints';
-
+@use 'mixins';
 
 .game-section {
     padding: 2rem;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: row;
+    @include mixins.flexbox-layout(row, wrap, center, stretch);
     gap: 2rem;
 }
 
 .game-sidebar {
     width: 18rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    @include mixins.flexbox-layout(column, nowrap, space-between, flex-start);
     background-color: #1a2c38;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -35,10 +29,7 @@
 
 .bet-label-group {
     width: 100%;
-    display: flex;
-    flex-direction: row wrap;
-    align-items: flex-end;
-    justify-content: space-around;
+    @include mixins.flexbox-layout(row, wrap, space-around, flex-end);
 }
 
 .bet-label-group label {
@@ -75,7 +66,7 @@
     padding: 0.5rem 0.5rem;
     background: transparent;
     border: solid 2px #314c5d;
-    color: white;
+    color: #fff;
     border-radius: 3px;
 }
 
@@ -114,9 +105,7 @@
     width: 100%;
     height: 100%;
     background-color: grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include mixins.flexbox-layout(row, nowrap, center, center);
     cursor: not-allowed;
     transition: 0.2s;
     border-radius: 0.5rem;

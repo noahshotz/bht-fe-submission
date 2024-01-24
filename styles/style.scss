@@ -38,27 +38,11 @@ section:nth-child(even) {
 }
 
 .landing-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
+    @include mixins.flexbox-layout(column, nowrap, center, flex-start);
 }
 
 .landing-image-container {
-    background-color: blue;
-    background-image: url("../assets/landing-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.landing-content {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.bg-image(blue, "../assets/landing-bg.png", cover, center, no-repeat);
 }
 
 // general fullscreen text sections
@@ -88,9 +72,9 @@ section:nth-child(even) {
     margin: 0.5rem 0rem;
     padding: 0.75rem 0.5rem;
     border-radius: 3px;
-    color: black;
+    color: #000;
     font-weight: 600;
-    background-color: lime;
+    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
 }
 
 .btn-landing {
@@ -177,7 +161,6 @@ td {
     td {
         padding: 0;
     }
-
 }
 
 @media (min-width: breakpoints.$breakpoint-lg) {
