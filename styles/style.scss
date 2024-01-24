@@ -1,8 +1,9 @@
+@use 'colors';
 @use 'reset';
+@use 'mixins';
 @use 'nav';
 @use 'game';
 @use 'breakpoints';
-@use 'mixins';
 
 /** 
  * General page setup
@@ -15,7 +16,7 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: #152f41;
+    background-color: colors.$dblue-80;
 }
 
 // landing section
@@ -42,7 +43,7 @@ section:nth-child(even) {
 }
 
 .landing-image-container {
-    @include mixins.bg-image(blue, "../assets/landing-bg.png", cover, center, no-repeat);
+    @include mixins.bg-image(colors.$lightblue, "../assets/landing-bg.png", cover, center, no-repeat);
 }
 
 // general fullscreen text sections
@@ -58,8 +59,8 @@ section:nth-child(even) {
     font-size: 1rem;
     text-align: center;
     display: inline-block;
-    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
-    color: #000;
+    background: colors.$orange-gradient;
+    color: colors.$black;
     padding: 0.5rem 1.25rem;
     border-radius: 10px;
     margin: 0;
@@ -72,9 +73,9 @@ section:nth-child(even) {
     margin: 0.5rem 0rem;
     padding: 0.75rem 0.5rem;
     border-radius: 3px;
-    color: #000;
+    color: colors.$black;
     font-weight: 600;
-    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
+    background: colors.$orange-gradient;
 }
 
 .btn-landing {
@@ -82,13 +83,13 @@ section:nth-child(even) {
     margin: 1rem 0rem;
     padding: 0.75rem 2.25rem;
     border-radius: 2rem;
-    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
-    color: black;
+    background: colors.$orange-gradient;
+    color: colors.$black
 }
 
 .btn-dark {
     background: #1e3544;
-    color: #fff;
+    color: colors.$white;
 }
 
 /**
@@ -104,7 +105,7 @@ h1 {
     font-size: clamp(3rem, 5vw, 6rem);
     font-weight: 700;
     font-family: 'Dela Gothic One', sans-serif;
-    background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
+    background: colors.$orange-gradient;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,7 +144,6 @@ td {
     td {
         padding: 0;
     }
-
 }
 
 @media (min-width: breakpoints.$breakpoint-sm) {
@@ -178,5 +178,4 @@ td {
     td {
         padding: 0.5rem 1.5rem;
     }
-
 }

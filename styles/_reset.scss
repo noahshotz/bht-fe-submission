@@ -1,3 +1,5 @@
+@use 'colors';
+
 *,
 *::before,
 *::after {
@@ -19,8 +21,8 @@ html {
     scroll-behavior: smooth;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
-    background-color: #0f212e;
-    color: white;
+    background-color: colors.$dblue-100;
+    color: colors.$white;
 }
 
 body {
@@ -41,12 +43,12 @@ h3 {
 }
 
 h3 {
-    color: #b8b9ff;
+    color: colors.$lightblue;
     font-weight: 500;
 }
 
 a {
-    color: white;
+    color: colors.$white;
 }
 
 ul li {
@@ -82,7 +84,7 @@ thead th:nth-child(4) {
 }
 
 thead {
-    border-bottom: solid 0.1rem #b8b9ff;
+    border-bottom: solid 0.1rem colors.$lightblue;
 }
 
 th {

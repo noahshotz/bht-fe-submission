@@ -1,14 +1,13 @@
 @use 'breakpoints';
+@use 'colors';
+@use 'mixins';
 
 header {
     padding: 1rem 5rem;
     width: 100vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include mixins.flexbox-layout(row, wrap, space-between, center);
     gap: 1rem;
-    background-color: #1a2c38;
+    background-color: colors.$dblue-90;
 }
 
 #header-logo {
@@ -19,10 +18,7 @@ header {
 }
 
 header ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include mixins.flexbox-layout(row, nowrap, space-between, center);
     gap: 2rem;
 }
 
@@ -30,8 +26,16 @@ header ul li {
     display: inline;
 }
 
-@media (max-width: breakpoints.$breakpoint-sm) {
+@media (max-width: breakpoints.$breakpoint-md) {
     header {
         padding: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (min-width: breakpoints.$breakpoint-lg) {
+    header {
+        padding: 1rem 5rem;
+        justify-content: space-between;
     }
 }

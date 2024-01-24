@@ -3,7 +3,11 @@
  */
 
 @use 'breakpoints';
+@use 'colors';
 @use 'mixins';
+
+$br-sm: 3px;
+$br-lg: 0.5rem;
 
 .game-section {
     padding: 2rem;
@@ -14,9 +18,9 @@
 .game-sidebar {
     width: 18rem;
     @include mixins.flexbox-layout(column, nowrap, space-between, flex-start);
-    background-color: #1a2c38;
+    background-color: colors.$dblue-90;
     padding: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: $br-lg;
     order: 1
 }
 
@@ -42,13 +46,27 @@
     text-align: right;
     font-weight: 500;
     font-size: 0.8rem;
-    color: #427ca1;
+    color: colors.$dblue-50;
 }
 
 .help-section {
     padding-top: 1rem;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#alertbox {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 50%;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: colors.$alert;
+    z-index: 2;
+    border-radius: $br-sm;
 }
 
 .game-sidebar-section .btn {
@@ -65,9 +83,9 @@
 .game-sidebar-section input {
     padding: 0.5rem 0.5rem;
     background: transparent;
-    border: solid 2px #314c5d;
-    color: #fff;
-    border-radius: 3px;
+    border: solid 2px colors.$dblue-60;
+    color: colors.$white;
+    border-radius: $br-sm;
 }
 
 .game-sidebar-section .stats {
@@ -77,9 +95,9 @@
     text-align: left;
     font-weight: 400;
     font-size: 1rem;
-    background: #1e3544;
+    background: colors.$dblue-70;
     padding: 1rem;
-    border-radius: 3px;
+    border-radius: $br-sm;
     white-space: nowrap;
 }
 
@@ -104,11 +122,11 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: grey;
+    background-color: colors.$dblue-50;
     @include mixins.flexbox-layout(row, nowrap, center, center);
     cursor: not-allowed;
     transition: 0.2s;
-    border-radius: 0.5rem;
+    border-radius: $br-lg;
 }
 
 .grid-item::before {
@@ -118,18 +136,18 @@
 }
 
 .grid-item-active {
-    background-color: #1475e1;
+    background-color: colors.$cell;
     cursor: pointer;
 }
 
 .grid-item-active:hover {
     top: -2px;
-    background-color: #3c3cff;
+    background-color: colors.$cell-hover;
 }
 
 .mine-clicked,
 .mine-clicked:hover {
-    background-color: red;
+    background-color: colors.$alert;
 }
 
 .money-clicked,
@@ -138,16 +156,16 @@
 }
 
 .win {
-    background-color: yellow;
+    background-color: colors.$win;
 }
 
 .win:hover {
-    background-color: yellow;
+    background-color: colors.$win;
 }
 
 .game-over,
 .game-over:hover {
-    background-color: red;
+    background-color: colors.$alert;
 }
 
 .hide {

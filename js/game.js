@@ -11,8 +11,11 @@
     let cashOutButton = document.getElementById('cashout');
     // get `bet amount`
     let betInput = document.getElementById('bet');
-    // get `player balance``
+    // get `player balance`
     let balance = document.getElementById('balance');
+    // get `alert box` and p element
+    let alertbox = document.getElementById('alertbox');
+    let pElement = alertbox.querySelector('p');
 
     /**
      * Start game process event listener
@@ -38,13 +41,27 @@
 
         // validate bet size
         if (bet < 1) {
-            console.log("Your bet of " + (bet || 0) + " is too low. Minimum bet is 1 coin!");
+            alertbox.style.display = 'block';
+            pElement.textContent = "Your bet of " + (bet || 0) + " is too low. Minimum bet is 1 coin!";
+            startGameButton.classList.remove('hide');
+            cashOutButton.classList.add('hide');
+            // hide alert box
+            setTimeout(function () {
+                alertbox.style.display = 'none';
+            }, 3000);
             return;
         }
 
         // validate player balance
         if (bet > balance) {
-            console.log("Insufficient balance!");
+            alertbox.style.display = 'block';
+            pElement.textContent = "Insufficient balance!";
+            startGameButton.classList.remove('hide');
+            cashOutButton.classList.add('hide');
+            // hide alert box
+            setTimeout(function () {
+                alertbox.style.display = 'none';
+            }, 3000);
             return;
         }
 
