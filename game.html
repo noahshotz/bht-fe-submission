@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Play the game</title>
+    <title>Mache deinen Einsatz! 💰</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <!-- header -->
     <header>
         <a href="index.html" id="header-logo">Money Heist</a>
-        <a href="#" class="btn btn-dark">Balance: <span id="balance">500</span> €</a>
+        <a href="#" class="btn btn-dark">Guthaben: <span id="balance">500</span> €</a>
     </header>
 
     <!-- main content -->
@@ -31,20 +31,21 @@
                 <div class="game-sidebar-section">
                     <div class="bet-label-group">
                         <label for="bet">Einsatz</label>
-                        <span>Min: 1 - Max: 100</span>
+                        <span>Min: 1 - Max: All in</span>
                     </div>
                     <input id="bet" name="bet" type="number" min="1" max="100" />
-                    <button id="startgame" class="btn btn-default">Place bet</button>
-                    <button id="cashout" class="btn btn-default hide">Cash out<span id="current-profit"></span></button>
+                    <button id="startgame" class="btn btn-default">Geld setzen</button>
+                    <button id="cashout" class="btn btn-default hide">Auszahlen<span
+                            id="current-profit"></span></button>
                     <div class="stats">
-                        <span>Mine count:</span><span id="minecountindicator">-</span>
-                        <span>Money found:</span><span id="moneyfoundindicator">-</span>
-                        <span>Mine risk:</span><span id="mineriskindicator">-</span>
+                        <span>Minen:</span><span id="minecountindicator">-</span>
+                        <span>Geld gefunden:</span><span id="moneyfoundindicator">-</span>
+                        <span>Minenrisiko:</span><span id="mineriskindicator">-</span>
                     </div>
                 </div>
                 <div class="game-sidebar-section help-section">
-                    <a href="#">Help</a>
-                    <a href="#">Fairness</a>
+                    <a href="index.html#anleitung">Hilfe</a>
+                    <a href="index.html#gewinntabelle">Fairness</a>
                 </div>
             </div>
             <div class="game-grid-container">

@@ -40,6 +40,11 @@ h3 {
   margin: 1rem 0;
 }
 
+h3 {
+  color: #b8b9ff;
+  font-weight: 500;
+}
+
 a {
   color: white;
 }
@@ -77,16 +82,11 @@ thead th:nth-child(4) {
 }
 
 thead {
-  border-bottom: solid 0.1rem #2f5975;
+  border-bottom: solid 0.1rem #b8b9ff;
 }
 
 th {
   vertical-align: bottom;
-}
-
-th,
-td {
-  padding: 0.5rem 1.5rem;
 }
 
 header {
@@ -467,6 +467,17 @@ h2 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
+/**
+ * Tables styles
+ */
+th,
+td {
+  padding: 0.5rem 1.5rem;
+}
+
+/**
+ * Media queries
+ */
 @media (max-width: 576px) {
   .landing-section {
     flex-flow: column;
@@ -475,6 +486,10 @@ h2 {
     padding: 1rem;
     width: 100vw;
     height: 50%;
+  }
+  th,
+  td {
+    padding: 0;
   }
 }
 @media (min-width: 576px) {
@@ -486,40 +501,11 @@ h2 {
     width: 100vw;
     height: 50%;
   }
+  th,
+  td {
+    padding: 0;
+  }
 }
-/*
-@media (min-width: breakpoints.$breakpoint-md) {
-    .game-section {
-        padding: 2rem 0rem
-    }
-
-    .game-grid-container {
-        width: 60%;
-    }
-}
-
-
-
-@media (min-width: breakpoints.$breakpoint-lg) {
-    .game-section {
-        padding: 2rem 5rem
-    }
-
-    .game-grid-container {
-        width: 60%;
-    }
-}
-
-@media (min-width: breakpoints.$breakpoint-xl) {
-    .game-section {
-        padding: 2rem 7rem
-    }
-
-    .game-grid-container {
-        width: 55%;
-    }
-}
-*/
 @media (min-width: 992px) {
   .landing-section {
     flex-flow: row;
@@ -528,5 +514,9 @@ h2 {
     padding: 5rem;
     width: 50vw;
     height: 100%;
+  }
+  th,
+  td {
+    padding: 0.5rem 1.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

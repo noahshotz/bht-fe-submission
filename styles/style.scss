@@ -133,6 +133,19 @@ h2 {
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
+/**
+ * Tables styles
+ */
+
+th,
+td {
+    padding: 0.5rem 1.5rem;
+}
+
+/**
+ * Media queries
+ */
+
 @media (max-width: breakpoints.$breakpoint-sm) {
     .landing-section {
         flex-flow: column;
@@ -144,9 +157,12 @@ h2 {
         height: 50%;
     }
 
+    th,
+    td {
+        padding: 0;
+    }
+
 }
-
-
 
 @media (min-width: breakpoints.$breakpoint-sm) {
     .landing-section {
@@ -159,41 +175,12 @@ h2 {
         height: 50%;
     }
 
+    th,
+    td {
+        padding: 0;
+    }
+
 }
-
-/*
-@media (min-width: breakpoints.$breakpoint-md) {
-    .game-section {
-        padding: 2rem 0rem
-    }
-
-    .game-grid-container {
-        width: 60%;
-    }
-}
-
-
-
-@media (min-width: breakpoints.$breakpoint-lg) {
-    .game-section {
-        padding: 2rem 5rem
-    }
-
-    .game-grid-container {
-        width: 60%;
-    }
-}
-
-@media (min-width: breakpoints.$breakpoint-xl) {
-    .game-section {
-        padding: 2rem 7rem
-    }
-
-    .game-grid-container {
-        width: 55%;
-    }
-}
-*/
 
 @media (min-width: breakpoints.$breakpoint-lg) {
     .landing-section {
@@ -204,6 +191,11 @@ h2 {
         padding: 5rem;
         width: 50vw;
         height: 100%;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 1.5rem;
     }
 
 }
