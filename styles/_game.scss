@@ -2,7 +2,7 @@
  * Game page
  */
 
- @use 'breakpoints';
+@use 'breakpoints';
 
 
 .game-section {
@@ -125,8 +125,7 @@
 .grid-item::before {
     content: '';
     display: block;
-    padding-top: 100%; /* This will make the height equal to 100% of the width */
-    /* Since it's a square, it will keep the aspect ratio of 1:1 */
+    padding-top: 100%;
 }
 
 .grid-item-active {
@@ -167,7 +166,6 @@
 }
 
 @media (max-width: breakpoints.$breakpoint-sm) {
-
     .game-section {
         gap: 1rem;
     }
@@ -197,7 +195,6 @@
 }
 
 @media (min-width: breakpoints.$breakpoint-md) {
-
     .game-section {
         padding: 2rem 0rem
     }
@@ -208,7 +205,6 @@
 }
 
 @media (min-width: breakpoints.$breakpoint-lg) {
-
     .game-section {
         padding: 2rem 5rem
     }
@@ -219,7 +215,6 @@
 }
 
 @media (min-width: breakpoints.$breakpoint-xl) {
-
     .game-section {
         padding: 2rem 7rem
     }
@@ -230,7 +225,6 @@
 }
 
 @media (min-width: breakpoints.$breakpoint-xxl) {
-
     .game-section {
         padding: 2rem 15rem
     }

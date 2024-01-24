@@ -34,7 +34,9 @@ body {
   scroll-snap-type: both mandatory;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 1rem 0;
 }
 
@@ -49,6 +51,34 @@ ul li {
 button,
 input {
   font-family: "Poppins", sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+thead th:nth-child(1) {
+  width: 25%;
+}
+
+thead th:nth-child(2) {
+  width: 25%;
+}
+
+thead th:nth-child(3) {
+  width: 25%;
+}
+
+thead th:nth-child(4) {
+  width: 25%;
+}
+
+th,
+td {
+  padding: 0.5rem 0;
 }
 
 header {
@@ -209,8 +239,7 @@ header ul li {
 .grid-item::before {
   content: "";
   display: block;
-  padding-top: 100%; /* This will make the height equal to 100% of the width */
-  /* Since it's a square, it will keep the aspect ratio of 1:1 */
+  padding-top: 100%;
 }
 
 .grid-item-active {
@@ -315,6 +344,10 @@ section {
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+}
+
+section:nth-child(even) {
+  background-color: #152f41;
 }
 
 .landing-section {

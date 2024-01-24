@@ -15,6 +15,10 @@ section {
     align-items: flex-start;
 }
 
+section:nth-child(even) {
+    background-color: #152f41;
+}
+
 // landing section
 .landing-section {
     margin: 0;
