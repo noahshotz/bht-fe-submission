@@ -453,7 +453,7 @@ a {
 }
 
 h1 {
-  font-size: clamp(1rem, 5vw, 6rem);
+  font-size: clamp(3rem, 5vw, 6rem);
   font-weight: 700;
   font-family: "Dela Gothic One", sans-serif;
   background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
@@ -464,7 +464,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 @media (max-width: 576px) {
