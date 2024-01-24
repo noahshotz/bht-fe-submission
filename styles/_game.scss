@@ -2,6 +2,9 @@
  * Game page
  */
 
+ @use 'breakpoints';
+
+
 .game-section {
     padding: 2rem;
     display: flex;
@@ -163,7 +166,7 @@
     display: none !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: breakpoints.$breakpoint-sm) {
 
     .game-section {
         gap: 1rem;
@@ -183,7 +186,7 @@
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: breakpoints.$breakpoint-sm) {
     .game-section {
         padding: 2rem 2rem
     }
@@ -193,7 +196,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: breakpoints.$breakpoint-md) {
 
     .game-section {
         padding: 2rem 0rem
@@ -204,7 +207,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: breakpoints.$breakpoint-lg) {
 
     .game-section {
         padding: 2rem 5rem
@@ -215,8 +218,7 @@
     }
 }
 
-
-@media (min-width: 1200px) {
+@media (min-width: breakpoints.$breakpoint-xl) {
 
     .game-section {
         padding: 2rem 7rem
@@ -227,7 +229,7 @@
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: breakpoints.$breakpoint-xxl) {
 
     .game-section {
         padding: 2rem 15rem

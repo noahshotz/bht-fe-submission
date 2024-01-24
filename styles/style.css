@@ -81,6 +81,11 @@ header ul li {
   display: inline;
 }
 
+@media (max-width: 576px) {
+  header {
+    padding: 1rem;
+  }
+}
 /**
  * Game page
  */
@@ -363,6 +368,7 @@ section {
  */
 .btn {
   font-size: 1rem;
+  text-align: center;
   display: inline-block;
   background: linear-gradient(180deg, #FECB2E 0%, #FA9917 100%);
   color: #000;
