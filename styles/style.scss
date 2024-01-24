@@ -2,6 +2,7 @@
 @use 'nav';
 @use 'game';
 @use 'breakpoints';
+@use 'mixins';
 
 /** 
  * General page setup
@@ -10,10 +11,7 @@
 section {
     width: 100vw;
     padding: 10rem 2rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
+    @include mixins.flexbox-layout(row, wrap, center, flex-start);
 }
 
 section:nth-child(even) {
