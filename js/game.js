@@ -42,7 +42,7 @@
         // validate bet size
         if (bet < 1) {
             alertbox.style.display = 'block';
-            pElement.textContent = "Your bet of " + (bet || 0) + " is too low. Minimum bet is 1 coin!";
+            pElement.textContent = "Dein Einsatz von " + (bet || 0) + " € ist zu niedrig. Mindesteinsatz ist 1 €!";
             startGameButton.classList.remove('hide');
             cashOutButton.classList.add('hide');
             // hide alert box
@@ -55,7 +55,7 @@
         // validate player balance
         if (bet > balance) {
             alertbox.style.display = 'block';
-            pElement.textContent = "Insufficient balance!";
+            pElement.textContent = "Guthaben nicht ausreichend!";
             startGameButton.classList.remove('hide');
             cashOutButton.classList.add('hide');
             // hide alert box
@@ -202,6 +202,5 @@
             newGridItem.className = 'grid-item grid-item-active';
             newGridItem.querySelector("h2").innerHTML = "";
         }
-
     }
 })();

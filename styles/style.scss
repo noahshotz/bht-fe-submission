@@ -22,7 +22,7 @@ section:nth-child(even) {
 /** 
  * Landing section
  */
- .landing-section {
+.landing-section {
     margin: 0;
     padding: 0;
     height: calc(100vh - 68px);
@@ -116,15 +116,6 @@ h1 {
 
 h2 {
     font-size: clamp(2rem, 4vw, 3rem);
-}
-
-/**
- * Tables styles
- */
-
-th,
-td {
-    padding: 0.5rem 1.5rem;
 }
 
 /**

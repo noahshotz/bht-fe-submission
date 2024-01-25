@@ -60,6 +60,10 @@ input {
     font-family: 'Poppins', sans-serif;
 }
 
+/**
+ * Tables styles
+ */
+
 table {
     table-layout: fixed;
     width: 100%;
@@ -68,19 +72,19 @@ table {
 }
 
 thead th:nth-child(1) {
-    width: 25%;
+    width: 27%;
 }
 
 thead th:nth-child(2) {
-    width: 25%;
+    width: 35%;
 }
 
 thead th:nth-child(3) {
-    width: 25%;
+    width: 19%;
 }
 
 thead th:nth-child(4) {
-    width: 25%;
+    width: 19%;
 }
 
 thead {
@@ -89,4 +93,10 @@ thead {
 
 th {
     vertical-align: bottom;
+}
+
+th,
+td {
+    padding: 0.5rem 1.5rem;
+    word-break: break-all;
 }
